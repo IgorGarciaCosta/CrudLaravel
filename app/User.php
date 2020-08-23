@@ -36,4 +36,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function relBooks(){
+        //um usuaria pode ter mts livros
+        return $this->hasMany('App\Models\ModelBook', 'id_user');
+    }
 }

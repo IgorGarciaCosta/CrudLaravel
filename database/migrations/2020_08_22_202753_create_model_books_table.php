@@ -16,7 +16,6 @@ class CreateModelBooksTable extends Migration
         Schema::create('book', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_user')->unsigned();
-            //constraint `book_id_user_foreign` foreign key (`id_user`) references
             $table-> foreign('id_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string('title');
             $table->integer('pages');
