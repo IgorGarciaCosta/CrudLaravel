@@ -8,6 +8,8 @@
 </head>
 <body>
     @yield('content')
+
+    <script src = "{{url("assets\bootstrap/js/javascript.js")}}"></script>
     
 </body>
 </html>
