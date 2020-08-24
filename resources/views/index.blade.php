@@ -1,15 +1,18 @@
 @extends('templates.template')
 
 @section('content')
-<h1 class="text-center">Crud</h1>
+<h1 class="text-center">Visualizar</h1>
 <hr>
 
-<div class="text text-center mt-3 mb-4">
-    <button class="btn btn-success">Cadastrar</button>
+<div class="text-center mt-3 mb-4">
+    <a href="">
+        <button class= "btn btn-success">Cadastrar</button>
+    </a>
 </div>
 
+
 <div class="col-8 m-auto">
-    <table class="table text-center">
+<table class="table text-center">
         <thead class="thead-dark">
             <tr>
                 <th scope="col">ID</th>
@@ -30,7 +33,7 @@
                 <td>{{$user->name}}</td>
                 <td>{{$books->price}}</td>
                 <td>
-                    <a href="">
+                    <a href="{{url("books/$books->id")}}">
                         <button class="btn btn-dark">Visualizar</button>
                     </a>
                     <a href="">
@@ -47,7 +50,8 @@
 
 
         </tbody>
-    </table>
+    </table> 
 
 </div>
 @endsection
+ 

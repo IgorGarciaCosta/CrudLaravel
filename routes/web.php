@@ -13,4 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //nodeDoController@metodoASerChamadoDentroDoController
-Route::get('/', 'BookController@index');
+//Route::get('/', 'BookController@index');
+Route::resource('/books', 'BookController');

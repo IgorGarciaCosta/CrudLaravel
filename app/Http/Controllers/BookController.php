@@ -60,7 +60,8 @@ class BookController extends Controller
      */
     public function show($id)
     {
-        //
+        $book = $this->objBook->find($id);//procura na tabela de livros o id
+        return view('show', compact('book'));
     }
 
     /**
